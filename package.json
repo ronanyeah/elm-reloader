@@ -1,0 +1,27 @@
+{
+  "name": "elm-reloader",
+  "version": "1.0.0",
+  "description": "Webpack loader providing hot code swapping for Elm",
+  "keywords": [
+    "Elm",
+    "HMR",
+    "hot",
+    "reload",
+    "loader",
+    "webpack"
+  ],
+  "author": "ronanyeah",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronanyeah/elm-reloader"
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "devDependencies": {},
+  "peerDependencies": {
+    "elm-webpack-loader": "^8.0.0"
+  },
+  "dependencies": {
+    "elm-hot": "^1.1.6"
+  }
+}
