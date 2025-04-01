@@ -1,6 +1,6 @@
 {
   "name": "elm-reloader",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Webpack loader providing hot code swapping for Elm",
   "keywords": [
     "Elm",
@@ -16,13 +16,17 @@
     "url": "git+https://github.com/ronanyeah/elm-reloader.git"
   },
   "license": "MIT",
-  "main": "src/index.ts",
-  "devDependencies": {},
-  "peerDependencies": {
-    "elm-webpack-loader": "^8.0.0"
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node"
   },
   "dependencies": {
-    "@types/node": "^22.13.17",
-    "webpack": "^5.98.0"
+    "@types/node": "^22.13.17"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.2"
+  },
+  "peerDependencies": {
+    "elm-webpack-loader": "^8.0.0"
   }
 }

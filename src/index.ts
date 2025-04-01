@@ -1,13 +1,12 @@
 // From: https://github.com/klazuka/elm-hot/blob/master/src/inject.js
 
-import { LoaderContext } from "webpack";
 import * as path from "path";
 import { readFileSync } from "fs";
 
-const hmrFilePath = path.resolve(__dirname, "./hmr.js");
+const hmrFilePath = path.resolve(__dirname, "../assets/hmr.js");
 const hmrCode = readFileSync(hmrFilePath, "utf8");
 
-export default function (this: LoaderContext<void>, content: string) {
+export default function (content: string) {
   const result = inject(content, hmrCode);
   return result;
 }
